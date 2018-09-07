@@ -1,0 +1,130 @@
+
+.game-row {
+    width: 100%;
+    .game-title {
+        color: #787679;
+        margin: 0;
+        font-size: 30px;
+        padding: 8px;
+        @media screen and (max-width: 480px) {
+            font-size: 20px;
+        }
+    }
+    .game-title.actived {
+        color: #f4f3f4;
+    }
+}
+.game-card {
+    height: 160px;
+    padding: 8px;
+    animation: FadeIn 1s linear;
+    animation-fill-mode: both;
+    .game-inner-card {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        transition: .5s ease-in;
+        .card-title {
+            font-size: 17px;
+            transition: .5s ease-in;
+        }
+        &:hover {
+            transform: scale(1.05);
+            .card-title {
+                font-size: 32px;
+            }
+        }        
+    }    
+    &:hover {
+        cursor: pointer;        
+    }
+}
+
+.card-deck {
+    padding-bottom: 15px;
+}
+
+.slick-current {
+    .actived {
+        .game-inner-card {
+            border: 5px solid #FFFFFF;
+            transform: scale(1.03);
+            .card-title {
+                font-size: 32px;
+            }
+        }        
+    }
+}
+
+.slick-arrow {
+    display: none !important;
+}
+
+@media screen and (max-width: 960px) {
+    .game-card {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .game-card {
+        height: 140px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .game-card {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .game-card {
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-card {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .game-card {
+        height: 115px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .game-title {
+        padding-left: 30px !important;
+    }
+    .game-card {
+        padding: 0 30px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .game-title {
+        padding-left: 15px !important;
+    }
+    .game-card {
+        padding: 0 15px;
+    }
+}
+
+@keyframes FadeIn { 
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
